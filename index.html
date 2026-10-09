@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Travel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header>
+    <h1>🌍 Language Travel</h1>
+    <p>مترجم زبان‌های کشورها، برنامه‌نویسی، رمزگذاری و زبان‌های خیالی</p>
+  </header>
+
+  <nav class="modes">
+    <button class="mode active" data-mode="builder">Builderer</button>
+    <button class="mode" data-mode="earth">Come back to earth</button>
+    <button class="mode" data-mode="travel">Let's travel</button>
+  </nav>
+
+  <section class="panel">
+    <div id="builderControls">
+      <label for="category">دسته‌بندی زبان</label>
+      <select id="category"></select>
+      <label for="specialLang">انتخاب زبان</label>
+      <select id="specialLang"></select>
+      <p class="hint">Builderer: متن را به کد قابل اجرا یا قالب/کدگذاری قابل پشتیبانی تبدیل می‌کند.</p>
+    </div>
+
+    <div id="earthControls" hidden>
+      <label for="earthLang">زبان یا کد مبدأ</label>
+      <select id="earthLang"></select>
+      <p class="hint">Come back to earth: کدگذاری‌های پشتیبانی‌شده را باز می‌کند و متن ساده را استخراج می‌کند.</p>
+    </div>
+
+    <div id="travelControls" hidden>
+      <label for="sourceLang">زبان کشور مبدأ</label>
+      <select id="sourceLang"></select>
+      <div class="swaprow">
+        <span>زبان مبدأ ⇄ زبان مقصد</span>
+        <button id="swap" type="button">جابه‌جایی</button>
+      </div>
+      <label for="targetLang">زبان کشور مقصد</label>
+      <select id="targetLang"></select>
+    </div>
+
+    <div id="countryTargetBox">
+      <label for="countryTarget">زبان کشور برای نتیجه</label>
+      <select id="countryTarget"></select>
+    </div>
+
+    <label for="inputText">متن ورودی</label>
+    <textarea id="inputText" rows="7" placeholder="متن را اینجا بنویس..."></textarea>
+
+    <div class="actions">
+      <button id="translateBtn" class="primary">ترجمه / تبدیل</button>
+      <button id="clearBtn" type="button">پاک کردن</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="resultHead">
+      <h2>نتیجه</h2>
+      <button id="copyBtn" type="button">کپی نتیجه</button>
+    </div>
+    <p id="status" role="status">حالت موردنظر را انتخاب کن و متن بنویس.</p>
+    <textarea id="outputText" rows="10" readonly placeholder="نتیجه اینجا نمایش داده می‌شود..."></textarea>
+  </section>
+
+  <footer>
+    ترجمهٔ زبان‌های کشورها به اینترنت نیاز دارد. تبدیل کدگذاری‌ها به‌صورت محلی انجام می‌شود.
+    تبدیل متن به تمام زبان‌های خیالی یا تبدیل هر کد دلخواه به معنی طبیعی، بدون واژه‌نامه یا مبدل اختصاصی ممکن نیست.
+  </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
