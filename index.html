@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Travel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>🌍 Language Travel</h1>
+      <p>مترجم زبان‌ها، کدها و زبان‌های خیالی</p>
+    </header>
+
+    <nav class="modes">
+      <button class="mode active" data-mode="builder">Builderer</button>
+      <button class="mode" data-mode="earth">Come back to earth</button>
+      <button class="mode" data-mode="travel">Let's travel</button>
+    </nav>
+
+    <section class="panel">
+      <label for="targetLang">زبان کشور مقصد</label>
+      <select id="targetLang"></select>
+
+      <div id="catalogControls">
+        <label for="category">دسته‌بندی زبان‌ها</label>
+        <select id="category"></select>
+
+        <label for="language">انتخاب زبان</label>
+        <select id="language"></select>
+        <button id="translateInfo" class="primary">ترجمه نام و توضیحات</button>
+      </div>
+
+      <div id="travelControls" hidden>
+        <label for="sourceLang">زبان مبدأ</label>
+        <select id="sourceLang"></select>
+
+        <div class="swap-row">
+          <span>زبان مبدأ ← زبان مقصد</span>
+          <button id="swap" type="button">⇄ جابه‌جایی</button>
+        </div>
+
+        <label for="travelText">متنی که می‌خواهی ترجمه شود</label>
+        <textarea id="travelText" rows="6" placeholder="متن را اینجا بنویس..."></textarea>
+        <button id="translateText" class="primary">Let's travel ✈️</button>
+      </div>
+    </section>
+
+    <section class="result-panel">
+      <div class="result-head">
+        <h2>نتیجه ترجمه</h2>
+        <button id="copy" type="button">کپی نتیجه</button>
+      </div>
+      <div id="status" role="status">یک حالت را انتخاب کن.</div>
+      <pre id="result">نتیجه اینجا نمایش داده می‌شود.</pre>
+    </section>
+
+    <footer>
+      ترجمه آنلاین است؛ برای استفاده به اینترنت نیاز داری.
+      نام اصلی زبان‌ها در فهرست حفظ می‌شود.
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
